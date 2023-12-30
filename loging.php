@@ -12,7 +12,7 @@
 
     if (isset($_POST['username']) && isset($_POST['password'])){
         $name = $_POST['username'];
-        $Password = md5($_POST["password"]);
+        $password = md5($_POST["password"]);
         $saveLoging =   false;
         
         if(isset($_POST["remember"])){
@@ -20,7 +20,7 @@
         }
         
 
-        $sql = "SELECT * FROM your_table_name WHERE username='$name' AND password='$Password'";
+        $sql = "SELECT * FROM userdata WHERE username='$name' AND password='$password'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {

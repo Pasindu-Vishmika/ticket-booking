@@ -18,7 +18,7 @@
         $Password = md5($_POST["password"]); 
         $agree = $_POST['agree']
 
-        $sql = "INSERT INTO your_table_name (username, email, password,terms) VALUES ('$name', '$email', '$Password' , '$agree')";
+        $sql = "INSERT INTO userdata (username, email, password,terms) VALUES ('$name', '$email', '$Password' , '$agree')";
 
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
