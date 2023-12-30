@@ -16,7 +16,7 @@
         $name = $_POST['username'];
         $email = $_POST['email'];
         $Password = md5($_POST["password"]); 
-        $agree = $_POST['agree']
+        $agree = $_POST['agree'];
 
         $sql = "INSERT INTO userdata (username, email, password,terms) VALUES ('$name', '$email', '$Password' , '$agree')";
 
