@@ -1,9 +1,9 @@
 <?php
 
     $servername = "localhost";
-    $username = "your_username";
-    $password = "your_password";
-    $dbname = "your_database_name";
+    $username = "root";
+    $password = "";
+    $dbname = "VibeCine";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -16,9 +16,9 @@
         $name = $_POST['username'];
         $email = $_POST['email'];
         $Password = md5($_POST["password"]); 
-        $agree = $_POST['agree']
+        $agree = $_POST['agree'];
 
-        $sql = "INSERT INTO your_table_name (username, email, password,terms) VALUES ('$name', '$email', '$Password' , '$agree')";
+        $sql = "INSERT INTO userdata (username, email, password,terms) VALUES ('$name', '$email', '$Password' , '$agree')";
 
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
